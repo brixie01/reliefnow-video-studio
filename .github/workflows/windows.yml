@@ -2,9 +2,7 @@
 # path on a test clip (tools/ci_smoke.py): finders, transcribe, plan, render, style reference, the Studio, a motion graphic.
 name: Windows
 on:
-  push:
-    branches: [main, windows-support]
-  pull_request:
+  # manual only (Actions → Windows → Run workflow): on a private repo each run uses up to ~2 h of the free Actions minutes
   workflow_dispatch:
 
 jobs:
