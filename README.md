@@ -31,12 +31,12 @@ No CapCut, no timeline, no stock footage. Your videos never leave your computer.
 
 **From GitHub (gets updates):**
 
-1. Install [Git for Windows](https://git-scm.com/download/win) and the [Claude app](https://claude.ai/download), and sign in with your own Claude account. Accept the invitation to the private `brixie01/reliefnow-video-studio` repository (GitHub emails it).
+1. Install [Git for Windows](https://git-scm.com/download/win) and the [Claude app](https://claude.ai/download), and sign in with your own Claude account. No GitHub account needed.
 2. In the Claude app's **Code** tab, choose your Documents folder and say:
 
 > clone https://github.com/brixie01/reliefnow-video-studio and install it
 
-Sign in to GitHub when the window pops up. Claude downloads it, runs the installer (about 30 minutes, ≈ 8 GB) and starts the Studio at **http://localhost:8765**. Later, say **"update the Studio"** in that folder to get the newest version (`git pull`).
+Claude downloads it, runs the installer (about 30 minutes, ≈ 8 GB) and starts the Studio at **http://localhost:8765**. Later, say **"update the Studio"** in that folder to get the newest version (`git pull`).
 
 **From a zip:**
 
