@@ -1,0 +1,50 @@
+{
+ "brand": "ReliefNow Laser Centers",
+ "source": "reliefnowlasercenters.com site tokens (green #8BBE29, charcoal #141820, Open Sans)",
+ "colors": {
+  "background": "#141820",
+  "accent": "#8BBE29",
+  "text": "#FFFFFF",
+  "secondary": "#8B94A3",
+  "accent_hi": "#A6D04F",
+  "glow": "rgba(139,190,41,.55)",
+  "text_2": "#E4E8DF",
+  "text_dim": "#8B94A3",
+  "ink": "#141820",
+  "scene_bg": "#0F1218",
+  "card": "#1E232E"
+ },
+ "fonts": {
+  "hook": "Open Sans ExtraBold",
+  "subheader": "Open Sans Bold",
+  "captions": "Open Sans ExtraBold",
+  "captions_fallback": "Arial"
+ },
+ "logo": {
+  "position": "top-left",
+  "width_pct": 22,
+  "opacity": 0.95
+ },
+ "grade": {
+  "brightness": 0.03,
+  "contrast": 1.12,
+  "saturation": 1.12,
+  "sharpen": 0.4,
+  "enabled": false,
+  "note": "Design system: footage stays natural (no grade/LUT/vignette/scrim). Set decisions.json \"grade\": true to use the values below."
+ },
+ "audio": {
+  "voice_level": 1.0,
+  "music_level": 0.2,
+  "sfx_level": 0.6,
+  "lufs": -14
+ },
+ "design_system": "DESIGN_SYSTEM.md (v3, 2026-10-06), rebranded for ReliefNow: templates are drawn in #FF6A00 and recoloured to the brand accent at render (tools/brandkit.py)",
+ "captions": {
+  "style": "pop",
+  "font": "Open Sans ExtraBold",
+  "size_px_1920": 72,
+  "top_y_1920": 1150,
+  "keywords_per_video": 30
+ }
+}
