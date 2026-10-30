@@ -29,7 +29,16 @@ No CapCut, no timeline, no stock footage. Your videos never leave your computer.
 
 📘 Step-by-step guides: **[English](docs/GUIDE.md)** · **[Taglish](docs/GABAY.md)** · 📺 4-min screen-share tutorial (`docs/tutorial/Studio_Tutorial.mp4`)
 
-**Easiest:**
+**From GitHub (gets updates):**
+
+1. Install [Git for Windows](https://git-scm.com/download/win) and the [Claude app](https://claude.ai/download), and sign in with your own Claude account. Accept the invitation to the private `brixie01/reliefnow-video-studio` repository (GitHub emails it).
+2. In the Claude app's **Code** tab, choose your Documents folder and say:
+
+> clone https://github.com/brixie01/reliefnow-video-studio and install it
+
+Sign in to GitHub when the window pops up. Claude downloads it, runs the installer (about 30 minutes, ≈ 8 GB) and starts the Studio at **http://localhost:8765**. Later, say **"update the Studio"** in that folder to get the newest version (`git pull`).
+
+**From a zip:**
 
 1. Unzip `reliefnow-video-studio.zip` (right-click → **Extract All**) and put the `reliefnow-video-studio` folder somewhere easy, such as your Documents folder.
 2. Install the [Claude app](https://claude.ai/download), sign in with your own Claude account, go to the **Code** tab and choose that folder.
@@ -120,7 +129,7 @@ Alternatively, keep `"listen": "127.0.0.1"` and run `tailscale serve --bg 8765` 
 
 ## Limits (today)
 
-- On Windows, transcription runs on the CPU (faster-whisper), so it's slower than on Apple Silicon, and the person cut-out, face finder and text finder use open-source models (DeepLabV3, OpenCV, RapidOCR) instead of Apple Vision. A clean Windows machine installs and runs the whole path on every change (`.github/workflows/windows.yml`).
+- On Windows, transcription runs on the CPU (faster-whisper), so it's slower than on Apple Silicon, and the person cut-out, face finder and text finder use open-source models (DeepLabV3, OpenCV, RapidOCR) instead of Apple Vision. `.github/workflows/windows.yml` installs and runs the whole path on a clean Windows machine (start it by hand under Actions).
 - Linux isn't tested yet.
 - The live preview plays graphics exactly. Two pieces, the text behind you and the shrink card, show the last render, because they need the person cut-out.
 - It is a single-user local app, not a hosted service.
