@@ -61,7 +61,7 @@ def ensure_proxy(name):
                             "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(tmp)],
                            capture_output=True, text=True)
         if r.returncode == 0:
-            tmp.rename(px)
+            tmp.replace(px)
             jobs[f"proxy:{name}"] = {"state": "done", "log": ""}
         else:
             jobs[f"proxy:{name}"] = {"state": "error", "log": r.stderr[-2000:]}
@@ -364,7 +364,7 @@ def gfx_preview(o):
                             "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-b:v", "1500k", "-deadline", "realtime",
                             "-cpu-used", "8", "-auto-alt-ref", "0", "-an", str(tmp)])
             if tmp.exists():
-                tmp.rename(pv)
+                tmp.replace(pv)
             jobs[key] = {"state": "done"}
         studio_api.background(run)  # max 2 encodes at a time (was: one thread per graphic, all at once)
     return None

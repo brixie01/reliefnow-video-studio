@@ -559,7 +559,7 @@ def src_clip(name, s, e):
                         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(tmp)], capture_output=True)
         if not tmp.exists():
             return None
-        tmp.rename(out)
+        tmp.replace(out)
     return f"/media/{name}/s/{out.name}"
 
 

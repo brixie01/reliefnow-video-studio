@@ -677,7 +677,7 @@ def sfx_wav(name):
         w.setsampwidth(2)
         w.setframerate(sfx.SR)
         w.writeframes((x * 32767).astype(np.int16).tobytes())
-    tmp.rename(out)
+    tmp.replace(out)
     return out
 
 
@@ -734,7 +734,7 @@ def _make_hook_clip(wd, edl, bg, cut, secs):
             "-movflags", "+faststart", str(tmp)], capture_output=True)
     if not tmp.exists():
         return
-    tmp.rename(bg)
+    tmp.replace(bg)
     if not pm:
         return
     mk = bg.with_suffix(".mask.gray")
@@ -751,7 +751,7 @@ def _make_hook_clip(wd, edl, bg, cut, secs):
             "-auto-alt-ref", "0", str(tmpc)], capture_output=True)
     mk.unlink(missing_ok=True)
     if tmpc.exists():
-        tmpc.rename(cut)
+        tmpc.replace(cut)
 
 
 def render_clip(name, at, dur):
@@ -771,7 +771,7 @@ def render_clip(name, at, dur):
                         "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(tmp)], capture_output=True)
         if not tmp.exists():
             return None
-        tmp.rename(out)
+        tmp.replace(out)
     return f"/media/{name}/s/{out.name}"
 
 
